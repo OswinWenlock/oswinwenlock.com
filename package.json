@@ -1,0 +1,25 @@
+{
+  "name": "oswinewenlock.com",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.5.1",
+    "@fontsource-variable/crimson-pro": "^5.2.8",
+    "@fontsource/crimson-pro": "^5.2.8",
+    "@tailwindcss/vite": "^4.1.13",
+    "astro": "^5.14.1",
+    "sharp": "^0.34.4",
+    "tailwindcss": "^4.1.13"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "prettier-plugin-astro": "0.14.1",
+    "prettier-plugin-tailwindcss": "^0.6.14"
+  }
+}

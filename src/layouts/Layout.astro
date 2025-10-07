@@ -1,0 +1,23 @@
+---
+import "@styles/global.css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="The internet home of Oswin Wenlock." />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>Oswin Wenlock</title>
+  </head>
+
+  <body
+    class="dark:bg-linear-to-bl dark:to-welk bg-fell dark:text-fell-light text-welk
+      dark:bg-welk bg-no-repeat dark:from-[#220d21]"
+  >
+    <slot />
+  </body>
+</html>

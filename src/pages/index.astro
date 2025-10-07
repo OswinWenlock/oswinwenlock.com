@@ -1,0 +1,84 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Image from "astro/components/Image.astro";
+import Icon from "@components/Icon.astro";
+import Oswin from "@assets/oswin-wenlock.png";
+import Banner from "@assets/startpit-watercolour.png";
+
+const links = [
+  {
+    label: "YouTube",
+    href: "https://youtube.com/@OswinWenlock",
+    icon: "youtube",
+  },
+  {
+    label: "X",
+    href: "https://x.com/OswinWenlock",
+    icon: "x",
+  },
+  {
+    label: "Discord",
+    href: "https://discord.com/invite/xttrs3tK",
+    icon: "discord",
+  },
+  {
+    label: "Twitch",
+    href: "https://www.twitch.tv/oswinwenlock",
+    icon: "twitch",
+  },
+];
+---
+
+<Layout>
+  <main class="mx-auto min-h-screen font-serif text-xl">
+    <div>
+      <Image
+        src={Banner}
+        alt="Landscape photograph with watercolour filter"
+        loading="eager"
+        width="800"
+        class="mx-auto h-44 w-full max-w-3xl object-cover object-center transition-all md:h-72 md:rounded-b-xl"
+      />
+      <Image
+        src={Oswin}
+        alt="Portrait of me with watercolour filter"
+        loading="eager"
+        width="300"
+        class="outline-welk relative z-10 mx-auto -mt-12 mb-6 size-36 rounded-full outline-[10px] transition-all md:-mt-12 md:size-40"
+      />
+    </div>
+
+    <div class="mx-auto max-w-3xl px-4 text-center sm:px-4">
+      <h1 class="mb-6 text-4xl font-semibold transition-all sm:text-5xl">
+        Oswin Wenlock
+      </h1>
+
+      <p class="mx-auto mb-8 max-w-[40ch] leading-[1.5]">
+        An unsocial gamewright trying to be social – join me on my endeavour to
+        craft a game from the ground up, and on the many side quests I'm sure to
+        be distracted by.
+      </p>
+
+      <h2 class="sr-only">Links</h2>
+      <ul class="flex flex-wrap justify-center gap-4">
+        {
+          links.map((link) => (
+            <li class="hover:bg-gold group rounded-full p-4 transition-all hover:-translate-y-1 hover:shadow">
+              <a
+                href={link.href}
+                target="_blank"
+                class="group-hover:text-welk flex items-center gap-4"
+              >
+                <Icon name={link.icon} />
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <footer class="mt-24 border-t py-8 text-center text-lg">
+      © 2025 Oswin Wenlock
+    </footer>
+  </main>
+</Layout>

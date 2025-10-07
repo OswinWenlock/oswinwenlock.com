@@ -1,0 +1,18 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"svg"> {
+  name: string;
+}
+
+const { name, class: className, ...props } = Astro.props;
+
+const icons = import.meta.glob<{ default: any }>("../assets/icons/*.svg", {
+  eager: true,
+});
+
+const iconPath = `../assets/icons/${name}.svg`;
+const IconComponent = icons[iconPath]?.default;
+---
+
+{IconComponent && <IconComponent {...props} class:list={[className]} />}
