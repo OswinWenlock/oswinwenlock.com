@@ -39,13 +39,17 @@ const links = [
         width="800"
         class="mx-auto h-44 w-full max-w-3xl object-cover object-center transition-all md:h-72 md:rounded-b-xl"
       />
-      <Image
-        src={Oswin}
-        alt="Portrait of me with watercolour filter"
-        loading="eager"
-        width="300"
-        class="outline-welk relative z-10 mx-auto -mt-12 mb-6 size-36 rounded-full outline-[10px] transition-all md:-mt-12 md:size-40"
-      />
+      <div
+        class="dark:outline-welk outline-fell relative z-10 mx-auto -mt-12 mb-6 size-36 overflow-hidden rounded-full
+        bg-white mask-circle outline-[10px] transition-all md:-mt-12 md:size-40"
+      >
+        <Image
+          src={Oswin}
+          alt="Portrait of me with watercolour filter"
+          loading="eager"
+          width="300"
+        />
+      </div>
     </div>
 
     <div class="mx-auto max-w-3xl px-4 text-center sm:px-4">
